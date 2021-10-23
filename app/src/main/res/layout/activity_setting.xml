@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#130235"
+    tools:context=".settingActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#012E49"
+        android:elevation="24dp"
+        android:foregroundTint="#2962FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_fname_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_marginTop="10dp"
+        android:alpha="1"
+        android:elevation="16dp"
+        android:hint="First name"
+        android:textColorHint="@color/teal_200"
+        android:theme="@style/EditTextThemeOverlay"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/teal_700"
+        app:boxStrokeErrorColor="#F12121"
+        app:errorTextAppearance="@style/ErrorTextAppearance"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_fname_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/autour_one"
+            android:outlineProvider="background"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#15C6AE"
+            android:textColorHighlight="#4DC11A57" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_lname_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_marginTop="32dp"
+        android:alpha="1"
+        android:elevation="16dp"
+        android:hint="Last name"
+        android:textColorHint="@color/teal_200"
+        android:theme="@style/EditTextThemeOverlay"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/teal_700"
+        app:errorTextAppearance="@style/ErrorTextAppearance"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_fname_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_lname_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/autour_one"
+            android:outlineProvider="background"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#15C6AE"
+            android:textColorHighlight="#4DC11A57" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/notification_pref"
+        style="@style/Widget.AppCompat.CompoundButton.Switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/autour_one"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="Allow notification"
+        android:textColor="#15C6AE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_lname_til" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

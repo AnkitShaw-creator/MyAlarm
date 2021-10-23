@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBE2AF"
+    android:theme="@style/Theme.MaterialComponents"
+    tools:context=".DataInputActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/data_input_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#012E49"
+        android:elevation="24dp"
+        android:foregroundTint="#2962FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_name_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:alpha="1"
+        android:elevation="16dp"
+        android:hint="Add event name"
+        android:textColorHint="@color/purple"
+        android:theme="@style/EditTextThemeOverlay"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/purple"
+        app:errorTextAppearance="@style/ErrorTextAppearance"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_input_toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/autour_one"
+            android:outlineProvider="background"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#082164"
+            android:textColorHighlight="#4DC11A57" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_date"
+        android:layout_width="171dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="260dp"
+        android:backgroundTint="#0091EA"
+        android:elevation="16dp"
+        android:fontFamily="@font/autour_one"
+        android:outlineAmbientShadowColor="#0C2CE1"
+        android:shadowRadius="14"
+        android:text="Select Date"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_til" />
+
+    <Button
+        android:id="@+id/button_time"
+        android:layout_width="164dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="260dp"
+        android:backgroundTint="#0091EA"
+        android:elevation="16dp"
+        android:fontFamily="@font/autour_one"
+        android:shadowRadius="14"
+        android:text="Select Time"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_date" />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="81dp"
+        android:fontFamily="@font/autour_one"
+        android:gravity="center"
+        android:text="@string/no_date_selected"
+        android:textAlignment="center"
+        android:textColor="#012E49"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_date"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_til" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="79dp"
+        android:fontFamily="@font/autour_one"
+        android:gravity="center"
+        android:text="@string/no_time_selected"
+        android:textColor="#012E49"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toEndOf="@+id/button_time"
+        app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+    <TextView
+        android:id="@+id/remark_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/add_remark_for_the_event"
+        android:textAlignment="center"
+        android:textColor="#012E49"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_time" />
+
+    <EditText
+        android:id="@+id/remark_et"
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="63dp"
+        android:background="#CEE883"
+        android:ems="10"
+        android:fontFamily="@font/autour_one"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textColor="#3E231C"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remark_header"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_notification"
+        android:layout_width="356dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/autour_one"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="@string/set_reminder"
+        android:textColor="#012E49"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remark_et" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/importance_level"
+        android:textColor="#012E49"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_notification" />
+
+    <RadioGroup
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/rb_low"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/autour_one"
+            android:minHeight="48dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/low"
+            android:textColor="#795548"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_med"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/autour_one"
+            android:minHeight="48dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/medium"
+            android:textColor="#795548"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_high"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/autour_one"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/high"
+            android:textColor="#795548"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

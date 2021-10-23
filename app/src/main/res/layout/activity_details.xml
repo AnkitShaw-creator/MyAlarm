@@ -1,0 +1,188 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#012E49"
+        android:theme="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/imp_color_holder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/inner_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_toolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        app:elevation="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imp_color_holder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_toolbar"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/delete_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="240dp"
+        android:clickable="true"
+        app:elevation="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imp_color_holder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_toolbar"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#5B69B9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/detail_item_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/autour_one"
+            android:padding="10dp"
+            android:text="Item Name"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/inner_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detail_description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:fontFamily="@font/autour_one"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:text="Dummy text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/inner_layout"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@+id/detail_item_Name" />
+
+        <TableLayout
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:layerType="software"
+            android:layoutMode="clipBounds"
+            android:outlineAmbientShadowColor="#304FFE"
+            android:showDividers="middle|beginning|end"
+            android:stretchColumns="1"
+            app:layout_constraintEnd_toEndOf="@id/inner_layout"
+            app:layout_constraintStart_toStartOf="@id/inner_layout"
+            app:layout_constraintTop_toBottomOf="@id/detail_description_tv">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="196dp"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/autour_one"
+                    android:padding="10dp"
+                    android:text="On"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/detail_date_tv"
+                    android:layout_width="213dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/autour_one"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Date"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/autour_one"
+                    android:padding="10dp"
+                    android:text="At"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/detail_time_tv"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/autour_one"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="12:00 AM"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/autour_one"
+                    android:padding="10dp"
+                    android:text="Importance Level"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/detail_imp_level"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/autour_one"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="High"
+                    android:textAlignment="center" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
